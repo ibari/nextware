@@ -1,0 +1,47 @@
+/*
+  HEADER
+  -----
+*/
+
+.header {
+	margin: rem-calc(40) 0 rem-calc(70) 0;
+
+	a {
+		display: block;
+		margin: 0 auto;
+
+		.logo {
+			width: rem-calc(216);
+			height: rem-calc(84);
+		}
+	}	
+}
+
+.tools-nav {
+	border-top: 1px solid $primary-color;
+	border-bottom: 1px solid $primary-color;
+	padding: rem-calc(20) 0;
+	margin-bottom: rem-calc(50);
+
+	.button {
+		font-size: rem-calc(20);
+		font-family: $font-family-ffdinweb-bold;
+		line-height: 1.2;
+		padding: rem-calc(30);
+		margin: 0;
+
+		&:hover, &:focus, &.active {
+        	background: $dark-color;
+   		}
+
+   		@include breakpoint(medium) { 
+   			font-size: rem-calc(16);
+   			padding: rem-calc(20);
+   		}
+
+   		@include breakpoint(small) { 
+   			font-size: rem-calc(12);
+   			padding: rem-calc(10);
+   		}
+	}
+}

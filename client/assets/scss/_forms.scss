@@ -1,0 +1,16 @@
+/*
+  FORMS
+  -----
+*/
+
+input[type], textarea {
+	height: 2.8rem;
+}
+
+select {
+	height: 2.8rem;
+	font-size: rem-calc(14);
+	padding: rem-calc(4) rem-calc(28) rem-calc(4) rem-calc(10);
+	white-space: pre-wrap;
+	line-height: 1.2;
+}

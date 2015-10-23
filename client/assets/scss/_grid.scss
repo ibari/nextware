@@ -1,0 +1,35 @@
+/*
+  GRID
+  -----
+*/
+
+.app-main {
+	margin-bottom: rem-calc(40);
+}
+
+.scroll-section {
+	overflow-x: hidden;
+
+	&.scrollable {
+    	overflow-x: scroll;
+    }
+
+	.grid-block {
+		flex-wrap: nowrap;
+		width: 1400px;
+
+		.medium-4 {
+			-webkit-flex: 0 0 25% !important;
+				-ms-flex: 0 0 25% !important;
+					flex: 0 0 25% !important;
+			max-width: 25% !important;
+		}
+
+		.medium-2 {
+		    -webkit-flex: 0 0 12.5% !important;
+		        -ms-flex: 0 0 12.5% !important;
+		            flex: 0 0 12.5% !important;
+		    max-width: 12.5% !important;
+		}
+    }
+}

@@ -1,0 +1,101 @@
+---
+name: issue-scoping
+url: /issue-scoping
+controller: InterestsController
+---
+
+<div class="ui-view">
+	<h1>ISSUE SCOPING CHART</h1>
+
+	<h3>Purpose</h3>
+	<p>The Issue Scoping Chart provides users with a method of organizing and visualizing a wide range of stakeholders’ interests in relation to an isolated cyber incident or ongoing attacks, allowing users to identify where interests align and diverge.</p>
+
+	<h3>Value Added</h3>
+	<p>Based on the analysis of the Issue Scoping Chart, users can identify areas of natural conflict and cooperation between known stakeholders, collaborators, competitors, and adversaries. This understanding forms a basis for assessing what combination of technical, legal, policy, organizational, or other solutions will be required; with whom the user should seek to collaborate; and on what common interests collaboration can be founded. Additionally, understanding the scope of stakeholders’ interests and their intensity can help users reevaluate their organization’s priorities and allocation of resources related to cyber incidents. For example, if many stakeholders close to the organization have strong interests different from the leadership’s interests, the organization should consider the implications of failing to address those issues adequately.</p>
+
+	<h3>Method</h3>
+	<p><strong>Step 1:</strong> Decide what interest areas should be measured in the Issue Scoping Chart. Include interest areas that motivate stakeholders to act or shape their response to the cyber incident or ongoing attacks.<p>
+
+	<p>Users can input up to six interest areas to the chart below.</p>
+
+	<p><a class="help-link" href="#" zf-popup-toggle="popup-interest-areas"><span class="fi-question-mark"></span>Sample List of Interest Areas</a></p>
+	<zf-popup id="popup-interest-areas" class="padding">
+		<dl>
+			<dt>Reputation:</dt>
+			<dd>Loss of new and returning customers, employees, etc.</dd> 
+			<dt>Economic/Financial: </dt>
+			<dd>Cost of new processes, security, media, public relations, etc.</dd> 
+			<dt>Legal:</dt> 
+			<dd>Regulatory compliance and/or liability for damages to employees, customers, and business partners.</dd>
+			<dt>Operations:</dt>
+			<dd>Maintaining operational continuity and implementing any new operational processes.</dd>
+			<dt>Technical Security:</dt> 
+			<dd>All aspects of securing information technology infrastructure.</dd> 
+			<dt>Normative/Precedent Setting:</dt> 
+			<dd>Impact on norms of behavior in cyberspace and precedents for future cybersecurity investigations.</dd>
+		</dl>
+	</zf-popup>
+
+	<hr>
+
+	<section>
+		<facets-form facets="interestAreas"></facets-form>
+	</section>
+
+	<br>
+
+	<p><strong>Step 2:</strong> Determine which stakeholders to place on the Issue Scoping Chart. Include a broad range of stakeholders from internal groups to external organizations and those seemingly far removed from the cyber incident or ongoing attacks. For each stakeholder, first identify whether they are a <a class="help-link" href="#" zf-popup-toggle="primary-popup">Primary</a>, <a class="help-link" href="#" zf-popup-toggle="secondary-popup">Secondary</a>, or <a class="help-link" href="#" zf-popup-toggle="tertiary-popup">Tertiary</a> stakeholder and then identify the intensity of their interest in each area based on the provided scale.</p>
+
+	<zf-popup id="primary-popup" class="padding">
+	 	<p>Primary stakeholders are internal to the target organization and are directly affected by the incident or ongoing attacks.</p>
+	</zf-popup>
+	<zf-popup id="secondary-popup" class="padding">
+	 	<p>Secondary stakeholders are external to the target organization and are directly affected by the incident or ongoing attacks.</p>
+	</zf-popup>
+	<zf-popup id="tertiary-popup" class="padding">
+	 	<p>Tertiary stakeholders are external to the target organization and are indirectly affected or interested in broadly related issues.</p>
+	</zf-popup>
+
+	<hr>
+	<section>
+		<stakeholders-facets-form facets="interestAreas" stakeholdersfacets="stakeholdersInterestAreas" stakeholdertypes="true" type="'interestAreas'"></stakeholders-facets-form>
+	</section>
+	<br>
+
+	<p><strong>Step 3:</strong> View results and make any necessary edits before downloading.</p>
+
+	<stakeholder-chart name="'issue-scoping-chart'">
+		<interests-chart chart="chart"></interests-chart>
+	</stakeholder-chart>
+
+	<hr>
+	<br>
+
+	<p><strong>Step 4:</strong> Analyze your results.</p> 
+
+	<h3>Analysis</h3>
+	<p>After generating the Issue Scoping Chart, consider the following questions:</p>
+
+	<ul>
+		<li><strong>Do many stakeholders share the same interests at the same level of intensity?</strong>
+			<ul>
+				<li>A high concentration of highly interested stakeholders in a particular interest area may indicate an area of conflict or cooperation depending on stakeholders’ goals.</li>
+				<li>Are there any areas in which few or no stakeholders are interested?</li>
+				<li>An interest area with few or no interested stakeholders may indicate an area of low priority related to cybersecurity or an area where the users’ organization may have difficulty finding resources to address potential problems.</li>
+			</ul>
+		</li>
+		<li><strong>Which stakeholders have many interests or few interests? Are they able to influence outcomes in these interest areas?</strong>
+			<ul>
+				<li>Stakeholders with specific interests and a significant ability to influence outcomes could be useful partners.</li>
+				<li>Stakeholders with many interests may have a large stake in the outcome of the cyber incident(s).</li>
+			</ul>
+		</li>
+		<li><strong>What do individual stakeholders’ interest areas and/or the intensity of their interests say about their motivations related to the cyber incident(s)?</strong>
+			<ul>
+				<li>Stakeholders’ interests and the intensity of their interests may indicate whether they will simply monitor or seek to influence the outcome of the cyber incident(s).</li>
+			</ul>
+		</li>
+	</ul>
+
+	<small>**Note that the involvement of particular stakeholders, such as national governments or federal agencies, may indicate the cyber incident(s) rise to the level of a national security threat. This means users’ organizations will need to engage in close collaboration with appropriate government agencies when investigating and responding to the cyber incident(s).</small>
+<div>

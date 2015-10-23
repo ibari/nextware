@@ -1,0 +1,23 @@
+<form>
+	<div class="scroll-section scrollable">
+		<div class="grid-block">
+			<div class="medium-4 grid-content"></div>
+			<div class="medium-2 grid-content" ng-repeat="facet in facets.list" ng-if="facet.name">
+				<h5 ng-model="facet.name">{{facet.name}}</h5>
+			</div>
+		</div>
+
+		<ul class="field-list">
+			<li class="grid-block fadeIn" ng-repeat="th in threatsfacets.list">
+				<div class="medium-4 grid-content">
+					<h3>{{$index + 1}}</h3><input type="text" value="{{th.name}}" placeholder="Threat" ng-model="th.name">
+				</div>
+				<div class="medium-2 grid-content fadeIn" ng-repeat="data in th.data[type]" ng-if="facets.list[data.facetId].name">
+					<select ng-model="data.value" ng-options="option.value as option.text for option in threatsfacets.options"></select>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<hr>
+	<p><a class="add-link" ng-click="addThreatFacets()"><span class="fi-plus-thin"></span>Add New</a></p>
+</form>

@@ -1,0 +1,61 @@
+---
+name: threat-assessment
+url: /threat-assessment
+controller: ThreatsController
+---
+
+<div class="ui-view">
+	<h1>THREAT ASSESSMENT GRAPH</h1>
+
+	<h3>Purpose</h3>
+	<p>The Threat Assessment Graph provides users with a method of describing and visualizing the types of cyber threats their organization may face, the likelihood of these attacks, and their possible aggregate impact.</p>
+
+	<h3>Value Added</h3>
+	<p>Based on the analysis of the Threat Assessment Graph, users can identify the most critical threats to their organization and the likely actors that would carry out those attacks. Completing the graph requires the user to explore attackers’ motivations and capabilities and the vulnerability of user organizations’ assets. Understanding the nature and impact of cyber threats specific to a user’s organization is necessary to implementing adequate cybersecurity measures and incident response plans. In the process of completing this graph, users may identify areas in which they need to collect further threat intelligence or conduct thorough risk assessments.</p>
+
+	<h3>Method</h3>
+	<p><strong>Step 1:</strong> Determine what threat objectives to map on the graph. A threat objective is an attack actor’s intent related to a particular asset. For example, if data is identified as the asset, then the intent could be to steal, destroy, or make the data public, which translates respectively into the following attack objectives: data theft, data destruction, and data leaks.</p>
+
+	<p>Define the following for each threat objective based on the provided scale:<br>
+	<strong>Impact:</strong> What is the estimated aggregate political, financial, and/or operational cost of the attack?<br>
+	<strong>Likelihood:</strong> What is the chance this type of attack will occur? Likelihood is a function of attack actors’ capabilities, motivations, and intentions.</p>
+
+	<hr>
+	<section>
+		<threats-facets-form facets="objectives" threatsfacets="threatsObjectives" type="'objectives'"></threats-facets-form>
+	</section>
+
+	<br>
+
+	<p><strong>Step 2:</strong> View results and make any necessary edits before downloading.</p>
+
+	<stakeholder-chart name="'threats-chart'">
+		<threats-chart chart="chart"></threats-chart>
+	</stakeholder-chart>
+
+	<hr>
+	<br>
+
+	<p><strong>Step 3:</strong> Analyze your results.</p>
+
+	<h3>Analysis</h3>
+	<p>After generating the Threat Assessment Graph, consider the following questions:</p>
+
+	<ul>
+		<li><strong>Where are the threat objectives plotted on the graph?</strong>
+			<ul>
+				<li>Objectives that appear in the top right quadrant have a high impact and are more likely, meaning the attacker is capable and has a specific interest in the user’s organization.</li>
+				<li>Objectives that appear in the top left quadrant are also more likely but have less of an impact, meaning the attacker is capable but may not have a specific interest in the user’s organization or may prefer to target a lower value asset.</li>
+				<li>Objectives that appear in the bottom right quadrant are less likely but still have a high impact, meaning the attacker is less interested in targeting the asset(s) in question and/or does not have the capability or sophistication to achieve their objective.</li>
+				<li>Objectives that appear in the bottom left quadrant are less likely and have a lower impact, meaning the targeted asset is of low value and the attacker has neither the interest nor capability to target the user’s organization.</li>
+			</ul>
+		</li>
+		<li><strong>Who are the likely attack actor(s) that will carry out the threat objectives identified on the graph?</strong>
+			<ul>
+				<li>The identity of the attack actors will provide further insight into their capabilities, possible motives, and intentions. For example, a criminal organization and a nation state may both have an interest in stealing an organization’s data but they may not steal the same type of data or have the same intentions for the stolen data. Additionally, because the criminal organization and nation state likely have different capabilities they will use different methods to achieve their objective.</li>
+				<li>The identity of the attack actors will give some indication to when attacks are more or less likely to occur. For example, politically motivated attackers are likely to act in retaliation to a specific event or political context whereas financially motivated attackers are likely to act opportunistically.</li>
+			</ul>
+		</li>
+	</ul>
+<div>
+

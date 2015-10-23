@@ -1,0 +1,31 @@
+/*
+  MENU BAR
+  -----
+*/
+
+.menu-group {
+	&.grid-container {
+		@include breakpoint(1040px down) { 
+			padding: 0 1rem;          
+		}
+	}	
+}
+
+.menu-bar {
+	li > a {
+		color: #666666;
+		font-weight: bold;
+		line-height: 1.8;
+
+		&:hover {
+	      background: none;
+	      color: $primary-color;
+	    }
+	}
+
+	&.right > li > a {
+	    &:last-child {
+	    	padding-right: 0;	
+	    }
+	}
+}

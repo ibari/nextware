@@ -1,0 +1,17 @@
+<form class="scroll-section">
+	<div class="grid-block">
+		<div class="medium-4 grid-content">
+			<ul class="field-list">
+				<li ng-repeat="facet in facets.list | limitTo: 6" class="fadeIn">
+					<h3>{{$index + 1}}</h3><input type="text" value="{{facet.name}}" placeholder="{{facet.placeholder}}" ng-model="facet.name">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="grid-block">
+		<div class="grid-content">
+			<hr>
+			<p><a class="add-link" ng-click="addFacet()" ng-if="facets.list.length < 6"><span class="fi-plus-thin"></span>Add New</a></p>
+		</div>
+	</div>
+</form>

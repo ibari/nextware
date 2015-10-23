@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextWare Sessions Toolkit</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="vertical">
+      <div class="shrink collapse">
+        <div class="menu-group grid-container">
+          <ul class="menu-bar condense social-buttons">
+            <li>
+              <a href="https://www.facebook.com/CNASdc">
+                <span class="fi fi-social-facebook" title="social facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/CNASdc">
+                <span class="fi fi-social-twitter" title="social twitter" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ibari/nextware">
+                <span class="fi fi-social-github" title="View on GitHub" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-bar right">
+            <li><a href="http://www.nextwaresessions.org">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-main grid-content">
+        <div class="grid-container">
+          <div ng-include="'./partials/header.html'"></div>
+          <ui-view class="fade-in"></ui-view>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

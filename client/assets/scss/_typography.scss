@@ -1,0 +1,36 @@
+/*
+  TYPOGRAPHY
+  -----
+*/
+
+h1 {
+	margin-bottom: 1.25rem;
+}
+
+h4 {
+	margin-bottom: rem-calc(2);
+}
+
+h5, h6 {
+	color: $dark-color;
+	margin: 0 0 rem-calc(.4) 0;
+}
+
+.help-link, .add-link {
+	span {
+		display: inline-block;
+		font-size: rem-calc(14);
+		border: 1px solid $primary-color;
+		height: rem-calc(30);
+		width: rem-calc(30);
+		-moz-border-radius: rem-calc(15);
+		-webkit-border-radius: rem-calc(15);
+		text-align: center;
+		line-height: 2.5;
+		margin-right: rem-calc(6);
+	}
+}
+
+.add-link {
+	margin-left: rem-calc(6);
+}

@@ -1,0 +1,78 @@
+---
+name: impact-over-time
+url: /impact-over-time
+controller: ImpactsController
+---
+
+<div class="ui-view">
+	<h1>IMPACT OVER TIME GRAPH</h1>
+
+	<h3>Purpose</h3>
+	<p>The Impact Over Time Graph illustrates the positive or negative outcomes experienced over time resulting from an isolated cyber incident or ongoing attacks.</p>
+
+	<h3>Value Added</h3>
+	<p>Based on the analysis of the Impact Over Time Graph, users can identify potential triggers or actions that influence the outcome a single actor or multiple actors experience related to one or more cyber incidents. If the impact on multiple stakeholders is mapped over time, users can identify possible correlative or causal relationships between actors for further study. This type of analysis helps users deepen their understanding of the impact of a single cyber incident or ongoing incidents over time and provides context for relationships between multiple stakeholders.</p>
+
+	<h3>Method</h3>
+	<p><strong>Step 1:</strong> Decide how to measure time across the x-axis. Generally speaking, the measurement of time can be events-based or interval-based. For example, phases of preparing and responding to a cyber incident may be more appropriate for analyzing single attacks and their impact on multiple stakeholders while time measured in equal increments may be more appropriate for analyzing ongoing attacks and their impact on a single actor.</p>
+
+	<p>Users can input up to six time phases or increments in the graph below.</p>
+
+	<p><a class="help-link" href="#" zf-popup-toggle="phases-popup"><span class="fi-question-mark"></span>Sample List of Time Phases</a></p>
+	<zf-popup id="phases-popup" class="padding">
+	 	<p>
+			Intrusion<br>
+			Attack Discovery<br>
+			Investigation<br>
+			Mitigation<br>
+			Response
+	 	</p>
+	</zf-popup>
+
+	<hr>
+
+	<section>
+		<facets-form facets="phases"></facets-form>
+	</section>
+	<br>
+
+	<p><strong>Step 2:</strong> Choose which stakeholders to map on the graph. Include those stakeholders that are directly impacted by cyber attack(s) and those with an active role in responding to attack(s). Identify the impact experienced by each stakeholder during each time phase or increment according to the provided scale.</p>  
+
+	<hr>
+	<section>
+		<stakeholders-facets-form facets="phases" stakeholdersfacets="stakeholdersPhases" stakeholdertypes="false" type="'phases'"></stakeholders-facets-form>
+	</section>
+	<br>
+
+	<p><strong>Step 3:</strong> View results and make any necessary edits before downloading.</p>
+
+	<stakeholder-chart name="'impacts-chart'">
+		<impacts-chart chart="chart"></impacts-chart>
+	</stakeholder-chart>
+
+	<hr>
+	<br>
+
+	<p><strong>Step 4:</strong> Analyze your results.</p>
+
+	<h3>Analysis</h3>
+	<p>After generating the Impact Over Time Graph, consider the following questions:</p>
+
+	<ul>
+		<li><strong>Do any stakeholders experience the same or similar outcomes over time?</strong>
+			<ul>
+				<li>Stakeholders experiencing the same or similar outcomes related to a cyber attack may have shared interests or motivations. However, this is not always the case. If one or more stakeholders experience the same outcome but clearly do not share interests or motivations, it is likely that the nature of the outcome differs. For example, two stakeholders may experience highly beneficial outcomes but one may be political in nature while the other is financial.</li>
+			</ul>
+		</li>
+		<li><strong>Do any stakeholders experience opposite outcomes?</strong>
+			<ul>
+				<li>Stakeholders experiencing opposite outcomes related to a cyber attack may have divergent interests or motivations. It is possible that they are equally and oppositely impacted by a single action or they may have an indirect relationship—when one is damaged, the other benefits.</li>
+			</ul>
+		</li>
+		<li><strong>Are there abrupt changes in impact on particular stakeholders from one phase or time increment to the next?</strong>
+			<ul>
+				<li>An abrupt change in the impact experienced by a stakeholder indicates a precipitating event. This may be the result of a behavior change in the stakeholder, the actions of another stakeholder, or other external political, economic, or organizational changes.</li>
+			</ul>
+		</li>
+	</ul>
+</div>
